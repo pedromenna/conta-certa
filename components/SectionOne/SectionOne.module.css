@@ -1,0 +1,47 @@
+.section{
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+     align-items: center; 
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 90px;
+  }
+  
+  .title {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .title h1 {
+    font-weight: 900;
+  }
+  
+  .destaque {
+    color: rgba(0, 223, 191, 1);
+    font-weight: 900;
+  }
+  
+  .sub {
+    margin-right: 20px; /* Adicione margem à direita para espaçamento */
+    /* Seus estilos para o sub-título */
+  }
+
+  .imagem {
+    margin-left: 50px; 
+    margin-bottom: 90px;
+    
+  }
+
+
+.paragraph {
+  margin-bottom: 5px; 
+  color: #676464;
+}
+
+
+  
