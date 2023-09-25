@@ -11,7 +11,9 @@ export default function Home() {
 
   return (
     <div>
+      <div className={styles.bk}>
     <div className={styles.border}> </div>
+    </div>
     <main>
     <SectionOne/>
     <SectionTwo/>

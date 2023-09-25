@@ -20,15 +20,15 @@ export default function Titulo() {
           <li className="nav-item">
             <Link className="nav-link active" aria-current="page" href="#"></Link>
           </li>
-          <li className="nav-item" href="/SobreNós">
-            <Link className="nav-link" href="#"> 
+          <li className="nav-item" href="#sobre">
+            <Link className="nav-link" href="#sobre"> 
             <div className={styles.bold}>
             Sobre nós
             </div>
             </Link>
           </li>
-          <li className="nav-item" href="/Contato">
-            <Link className="nav-link" href="#">
+          <li className="nav-item" href="#contato">
+            <Link className="nav-link" href="#contato">
             <div className={styles.bold}>
             Contato
             </div>
@@ -43,18 +43,15 @@ export default function Titulo() {
     <div className={styles.margin_right}>
     <div className="collapse navbar-collapse float-end" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" href="#"></Link>
-          </li>
           <li className="nav-item" href="/Login">
-            <Link className="nav-link" href="#"> 
+            <Link className="nav-link" href="/Login"> 
             <div className={styles.bold}>
             Login
             </div>
             </Link>
           </li>
           <li className="nav-item" href="/Cadastro">
-            <Link className="nav-link" href="#">
+            <Link className="nav-link" href="/Cadastro">
             <div className={styles.bold}>
             Cadastro
             </div>

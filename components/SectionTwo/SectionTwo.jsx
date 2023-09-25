@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css"; // Certifique-se de importar o CSS do
 
 export default function SectionTwo() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="sobre">
       <div className={styles.flexContainer}>
         <div className={styles.imageContainer}>
           <img
@@ -17,9 +17,9 @@ export default function SectionTwo() {
           <div className={styles.title}>
             <div className={styles.mtitle}>
               <h1>Centralize o controle das </h1>
-              <h1>finanças de sua empresa em</h1>
+              <h1>finanças de sua empresa </h1>
               <h1>
-                um <span className={styles.destaque}>único local</span>.
+              em um <span className={styles.destaque}>único local</span>.
               </h1>
             </div>
             <div className={styles.pTwo}>

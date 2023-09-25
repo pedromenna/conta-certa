@@ -8,7 +8,7 @@ export default function () {
   const [text, setText] = useState("Informe a mensagem");
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="contato">
       <div className={styles.contact}><h1>Contato</h1></div>
       <div className={styles.box}>
       <div className={styles.form}>

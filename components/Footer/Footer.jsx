@@ -29,10 +29,10 @@ export default function Footer() {
                     <Link href="/#" className={styles.link}>
                       Home
                     </Link>
-                    <Link href="/#" className={styles.link}>
+                    <Link href="#sobre" className={styles.link}>
                       Sobre
                     </Link>
-                    <Link href="/#" className={styles.link}>
+                    <Link href="#contato" className={styles.link}>
                       Contato
                     </Link>
                   </div>

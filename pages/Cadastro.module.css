@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600&display=swap');
+
+.section{
+    background-color: #009C86;
+    font-family: 'Montserrat', sans-serif;
+    height: 150vh;
+      
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+
+}
+
+.form{
+    background-color:aliceblue;
+    padding: 50px;
+    width: 500px;
+    height: 700px;
+    border-radius: 10px;
+    
+}
+
+.buttonBox{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    margin-top: 30px;
+    background-color: #009C86;
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.buttonCancelar{
+    margin-top: 30px;
+    margin-left: 10px;
+    background-color: #DBDBDB;
+    padding: 8px 15px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+.access{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.access h1{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.boxA{
+    display: flex;
+    justify-content: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 30px;
+    color: #9b9999;
+}
+
+
+.cadas h1{
+    font-size:15px;
+    margin-top: 30px;
+}
+
+.cadastro{
+    text-decoration: none;
+    font-weight: bold;
+    color: #545454;
+    margin-left: 8px;
+}
+
+.botaoCancel{
+    text-decoration: none;
+    color: black;
+}
