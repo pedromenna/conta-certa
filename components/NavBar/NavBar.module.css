@@ -1,5 +1,5 @@
 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600&display=swap');
 
 .nav{
     background-color:rgba(218, 218, 218, 1);
@@ -21,4 +21,9 @@
 
 .margin_left{
     margin-left: 60px;
+}
+
+.icon{
+    color: rgba(0, 223, 191, 1);
+    font-size: 30px;
 }

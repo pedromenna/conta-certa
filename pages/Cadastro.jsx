@@ -8,7 +8,9 @@ export default function () {
   return (
     <section className={styles.section} id="contato">
       <div className={styles.image}>
-        <img src="./logoBranco.png" alt="logo" width={200} height={200} />
+        <Link href="/">
+          <img src="./logoBranco.png" alt="logo" width={200} height={200} />
+        </Link>
       </div>
       <div className={styles.box}>
         <div className={styles.form}>
@@ -55,23 +57,31 @@ export default function () {
 
           <div className={styles.buttonBox}>
             <button className={styles.button}>Criar conta</button>
-            <button className={styles.buttonCancelar}> <Link href="#Home" className={styles.botaoCancel}>Cancelar </Link></button>
+            <button className={styles.buttonCancelar}>
+              {" "}
+              <Link href="/" className={styles.botaoCancel}>
+                Cancelar{" "}
+              </Link>
+            </button>
           </div>
 
-
-        <div className={styles.boxA}>
-          <div className={styles.access}>
-            <h1>Acessar com:</h1>
-            <div className={styles.icons}>
-              <FaFacebook />
-              <FaGoogle />
-              <FaApple />
+          <div className={styles.boxA}>
+            <div className={styles.access}>
+              <h1>Acessar com:</h1>
+              <div className={styles.icons}>
+                <FaFacebook />
+                <FaGoogle />
+                <FaApple />
+              </div>
+              <div className={styles.cadas}>
+                <h1>
+                  Já possui uma conta?{" "}
+                  <Link className={styles.cadastro} href="/Login">
+                    Entre.
+                  </Link>
+                </h1>
+              </div>
             </div>
-            <div className={styles.cadas}>
-          <h1>Já possui uma conta? <Link className={styles.cadastro} href="/Login">Entre.</Link></h1>
-          </div>
-          </div>
-          
           </div>
         </div>
       </div>

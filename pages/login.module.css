@@ -42,6 +42,10 @@
     border: none;
     border-radius: 5px;
 }
+
+.button:hover{
+    background-color: #015f52;
+}
 .buttonCancelar{
     margin-top: 30px;
     margin-left: 10px;
@@ -50,6 +54,10 @@
     color: black;
     border: none;
     border-radius: 5px;
+}
+
+.buttonCancelar:hover{
+    background-color: #545454;
 }
 
 .access{
@@ -90,4 +98,9 @@
     font-weight: bold;
     color: #545454;
     margin-left: 8px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
 }
