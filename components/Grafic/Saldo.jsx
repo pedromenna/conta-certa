@@ -1,46 +1,63 @@
-import React from "react";
-import { Chart } from "react-google-charts";
-import './Saldo.module.css'
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
+import 'chartjs-plugin-datalabels';
 
-export const data = [
-    [
-      "Element",
-      "Density",
-      { role: "style" },
-      {
-        sourceColumn: 0,
-        role: "annotation",
-        type: "string",
-        calc: "stringify",
-      },
-    ],
-    ["Entradas", 8000, "#4DE475", "8000"],
-    ["Saídas", 2500, "#EC5448", "2500"],
-    ["Saldo", 5500, "#00DFBF", "5500"],
-  ];
-  
+export default function Saldo() {
+  const chartRef = useRef();
+  const myChart = useRef(null);
 
-export const options = {
-    width: 500,
-    height: 300,
-    bar: { groupWidth: "70%" }, 
-    legend: { position: "none" },
-    titleTextStyle: {
-        fontSize: 14,
-        bold: true, // Define o texto como negrito
-      }
 
+  useEffect(() => {
+    const ctx = chartRef.current.getContext('2d');
+
+    if (myChart.current) {
+      myChart.current.destroy();
+    }
+
+    myChart.current = new Chart(ctx, config);
+  }, []);
+
+  const labels = ["Entradas", "Saídas", "Saldo"];
+  const data = {
+    labels: labels,
+    datasets: [{
+      axis: 'y',
+      data: [8000, 2500, 5500],
+      fill: false,
+      backgroundColor: [
+        'rgba(77, 228, 117, 1)',
+        'rgba(236, 84, 72, 1)',
+        'rgba(0, 223, 191, 1)'
+      ],
+      borderWidth: 1
+    }]
   };
 
-export function Saldo() {
+  const config = {
+    type: 'bar',
+    data,
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: {
+          display: false
+        },
+        datalabels: {
+          display: true, // Exibir rótulos de dados nas barras
+          color: 'black', // Cor do texto
+          anchor: 'end', // Posição do texto dentro da barra
+          align: 'end', // Alinhamento do texto
+          font: {
+            weight: 'bold' // Estilo da fonte
+          }
+        }
+      }
+    }
+  };
+
   return (
-    <Chart
-      chartType="BarChart"
-      width="500px"
-      height="300px"
-      data={data}
-      options={options}
-    
-    />
+    <div>
+      <canvas ref={chartRef} style={{ width: '400px', height: '300px', padding: '20px', fontWeight:'800' }}></canvas>
+    </div>
   );
 }

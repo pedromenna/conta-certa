@@ -2,7 +2,12 @@
 import NavBar from "@/components/NavBar/NavBar";
 import styles from "./Initial.module.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Saldo } from "@/components/Grafic/Saldo";
+import Saldo from "@/components/Grafic/Saldo";
+import Pagto from "@/components/Grafic/Pagto";
+import Categoria from "@/components/Grafic/Categoria";
+import Fluxo from "@/components/Grafic/Fluxo";
+import Ultimas from "@/components/Grafic/Ultimas";
+
 
 export default function () {
   return (
@@ -10,41 +15,50 @@ export default function () {
       <NavBar />
       <div className={styles.border}> </div>
       <div className={styles.row}>
-        <div class="container text-center">
+        <div className="container text-center">
         <div className={styles.row}>
-          <div class="row">
-            <div class="col">
+          <div className="row">
+            <div className="col">
               <div className={styles.boxSaldo}>
                 <Saldo />
               </div>
             </div>
-            <div class="col">
-              <div className={styles.boxTwo}></div>
+            <div className="col">
+              <div className={styles.boxTwo}>
+                <Pagto />
+              </div>
             </div>
-            <div class="col ms-0">
-              <div className={styles.box}></div>
+            <div className="col ms-0">
+              <div className={styles.box}>
+                <Categoria/>
+              </div>
             </div>
           </div>
           <div className={styles.secondRow}>
-          <div class="row">
-            <div class="col">
-              <div className={styles.boxSaldo}></div>
+          <div className="row">
+            <div className="col">
+              <div className={styles.boxSaldo}>
+                <Fluxo/>
+              </div>
             </div>
-            <div class="col">
-              <div className={styles.boxUltimas}></div>
+            <div className="col">
+              <div className={styles.boxUltimas}>
+                <Ultimas/>
+              </div>
             </div>
             </div>
           </div>
           <div className={styles.thirdRow}>
-          <div class="row">
-            <div class="col">
+          <div className="row">
+            <div className="col">
               <div className={styles.boxSaldo}></div>
             </div>
-            <div class="col">
+            <div className="col">
               <div className={styles.boxUltimas}></div>
             </div>
             </div>
-            </div>
+            </div>.
+
           </div>
           </div>
         </div>
