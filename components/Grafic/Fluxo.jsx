@@ -58,7 +58,8 @@ export default function Fluxo() {
 
   return (
     <div>
-      <canvas ref={chartRef} style={{ width: '400px', height: '300px', padding: '20px', fontWeight: '800' }}></canvas>
+          <h1 style={{ fontSize: '14px', marginTop:'20px', marginBottom:'0', fontWeight:'800'}}>Fluxo de caixa</h1>
+      <canvas ref={chartRef} style={{ width: '400px', height: '300px', padding: '40px', fontWeight: '800' }}></canvas>
     </div>
   );
 }

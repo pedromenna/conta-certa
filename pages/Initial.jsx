@@ -43,7 +43,8 @@ export default function () {
             </div>
             <div className="col">
               <div className={styles.boxUltimas}>
-                <Ultimas/>
+             <Ultimas/>
+
               </div>
             </div>
             </div>

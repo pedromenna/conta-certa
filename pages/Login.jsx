@@ -4,6 +4,20 @@ import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
 import { FaFacebook, FaApple, FaGoogle } from "react-icons/fa6";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function () {
   return (
     <section className={styles.section}>
