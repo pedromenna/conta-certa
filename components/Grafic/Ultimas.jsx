@@ -4,32 +4,25 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from './Ultimas.module.css';
 
 function Ultimas() {
-    const [dadosExibidos, setDadosExibidos] = useState([]);
+    const [pagina, setPagina] = useState(1);
     const itensPorPagina = 4;
 
     const dadosDaTabela = [
         { col1: "Linha 1, Coluna 1", col2: "Linha 1, Coluna 2", col3: "Linha 1, Coluna 3", col4: "Linha 1, Coluna 4" },
         { col1: "Linha 2, Coluna 1", col2: "Linha 2, Coluna 2", col3: "Linha 2, Coluna 3", col4: "Linha 2, Coluna 4" },
         { col1: "Linha 3, Coluna 1", col2: "Linha 3, Coluna 2", col3: "Linha 3, Coluna 3", col4: "Linha 3, Coluna 4" },
-        { col1: "Linha 4, Coluna 1", col2: "Linha 4, Coluna 2", col3: "Linha 4, Coluna 3", col4: "Linha 4, Coluna 4" },
-        { col1: "Linha 5, Coluna 1", col2: "Linha 5, Coluna 2", col3: "Linha 5, Coluna 3", col4: "Linha 5, Coluna 4" },
-        { col1: "Linha 6, Coluna 1", col2: "Linha 6, Coluna 2", col3: "Linha 6, Coluna 3", col4: "Linha 6, Coluna 4" }
-    ];
+        { col1: "Linha 4, Coluna 1", col2: "Linha 4, Coluna 2", col3: "Linha 4, Coluna 3", col4: "Linha 4, Coluna 4" }]
+     
 
-    const handleClickMostrarMais = () => {
-        if (dadosExibidos.length < dadosDaTabela.length) {
-            const startIndex = dadosExibidos.length;
-            const endIndex = startIndex + itensPorPagina;
-            const novosDados = dadosDaTabela.slice(startIndex, endIndex);
-            setDadosExibidos([...dadosExibidos, ...novosDados]);
+    const startIndex = (pagina - 1) * itensPorPagina;
+    const endIndex = startIndex + itensPorPagina;
+    const dadosExibidos = dadosDaTabela.slice(startIndex, endIndex);
+
+    const mostrarMais = () => {
+        if (pagina < Math.ceil(dadosDaTabela.length / itensPorPagina)) {
+            setPagina(pagina + 1);
         }
     };
-
-    if (dadosExibidos.length === 0) {
-        // Exibir os primeiros 4 dados ao carregar a página
-        const dadosIniciais = dadosDaTabela.slice(0, itensPorPagina);
-        setDadosExibidos(dadosIniciais);
-    }
 
     return (
         <div className="container">
@@ -55,13 +48,13 @@ function Ultimas() {
                             <td>{linha.col4}</td>
                         </tr>
                     ))}
-                    {dadosExibidos.length < dadosDaTabela.length && (
+                    {pagina < Math.ceil(dadosDaTabela.length / itensPorPagina) && (
                         <tr>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td>
-                                <button className={styles.button} onClick={handleClickMostrarMais}>
+                                <button className={styles.button} onClick={mostrarMais}>
                                     <i className="bi bi-arrow-down-short"></i> Mostrar Mais
                                 </button>
                             </td>
