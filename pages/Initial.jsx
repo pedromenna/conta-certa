@@ -7,9 +7,16 @@ import Pagto from "@/components/Grafic/Pagto";
 import Categoria from "@/components/Grafic/Categoria";
 import Fluxo from "@/components/Grafic/Fluxo";
 import Ultimas from "@/components/Grafic/Ultimas";
+import Proximos from "@/components/Grafic/Proximos";
+import Futuras from "@/components/Grafic/Futuras";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import FloatingButton from "@/components/button/FloatingButton";
+
 
 
 export default function () {
+  
+
   return (
     <section className={styles.section}>
       <NavBar />
@@ -44,7 +51,6 @@ export default function () {
             <div className="col">
               <div className={styles.boxUltimas}>
              <Ultimas/>
-
               </div>
             </div>
             </div>
@@ -52,17 +58,25 @@ export default function () {
           <div className={styles.thirdRow}>
           <div className="row">
             <div className="col">
-              <div className={styles.boxSaldo}></div>
+              <div className={styles.boxSaldo}>
+                <Proximos/>
+              </div>
             </div>
             <div className="col">
-              <div className={styles.boxUltimas}></div>
+              <div className={styles.boxUltimas}>
+                <Futuras/>
+              </div>
             </div>
             </div>
             </div>.
 
+            <FloatingButton/>
           </div>
           </div>
         </div>
+    
+        
+        
     </section>
   );
 }

@@ -3,7 +3,7 @@
 .section{
     background-color: #dadada;
     font-family: 'Montserrat', sans-serif;
-    height: 200vh;
+    height: 15 0vh;
       
 }
 .border{
@@ -82,4 +82,15 @@
     margin-right: 70px;
 }
 
-
+.botaoFixo {
+    position: fixed; /* Torna o botão fixo */
+    bottom: 20px; /* Posiciona o botão na parte inferior da tela */
+    right: 20px; /* Posiciona o botão à direita da tela */
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0; /* Inicialmente, o botão é invisível */
+}

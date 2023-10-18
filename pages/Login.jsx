@@ -3,6 +3,24 @@ import styles from "./login.module.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
 import { FaFacebook, FaApple, FaGoogle } from "react-icons/fa6";
+import React, { useState,useContext } from 'react';
+
+import { AuthContext } from "@/components/contexts/auth";
+
+const loginPage = () => {
+
+  // const {authenticated,login} = useContext(AuthContext)
+  const [email,setEmail] = useState("")
+  const [password,setPassword] = useState("")
+
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+
+
+    console.log("submit",{email,password})
+
+    login(email,password)
+  }
 
 
 
@@ -15,10 +33,6 @@ import { FaFacebook, FaApple, FaGoogle } from "react-icons/fa6";
 
 
 
-
-
-
-export default function () {
   return (
     <section className={styles.section}>
       <div className={styles.image}>
@@ -32,19 +46,24 @@ export default function () {
             <input
               type="email"
               className="form-control"
-              id="floatingInputDisabled"
+              id="email" //floatingInputDisabled
               placeholder="name@example.com"
-              disabled
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              
             />
             <label htmlFor="floatingInputDisabled">E-mail</label>
           </div>
           <div className="form-floating mb-3">
             <input
-              type="email"
+              type="password"
+              name="password"
               className="form-control"
-              id="floatingInputDisabled"
+              id="password"
               placeholder="name@example.com"
-              disabled
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              
             />
             <label htmlFor="floatingInputDisabled">Senha</label>
           </div>
@@ -84,3 +103,7 @@ export default function () {
     </section>
   );
 }
+
+
+
+export  default loginPage

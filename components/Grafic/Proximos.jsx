@@ -3,16 +3,16 @@ import "bootstrap/dist/css/bootstrap.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from './Ultimas.module.css';
 
-function Ultimas() {
+function Proximos() {
     const [indiceAtual, setIndiceAtual] = useState(0);
 
     const dadosDaTabela = [
-        { col1: "Fornecedor X", col2: "16/ago", col3: "PIX", col4: "R$700,00" },
-        { col1: "Fornecedor Y", col2: "16/ago", col3: "PIX", col4: "R$800,00" },
-        { col1: "Fornecedor Z", col2: "16/ago", col3: "Débito", col4: "R$900,00" },
-        { col1: "Fornecedor X", col2: "15/ago", col3: "A vista", col4: "R$800,00" },
-        { col1: "Fornecedor Y", col2: "15/ago", col3: "Débito", col4: "R$600,00" }
-        ];
+        { col1: "Água", col2: "18/ago", col3: "R$700,00"  },
+        { col1: "Aluguel", col2: "18/ago", col3: "R$900,00" },
+        { col1: "Luz", col2: "19/ago", col3: "R$600,00" },
+        { col1: "Lixo", col2: "20/ago", col3: "R$100,00"},
+        { col1: "Limpeza", col2: "20/ago", col3: "R$300,00"}
+    ];
 
     const tamanhoPagina = 4;
 
@@ -41,7 +41,7 @@ function Ultimas() {
                                 marginTop: '20px',
                                 marginBottom: '20px',
                                 fontWeight: '800',
-                            }}>Últimas despesas</h1>
+                            }}>Próximos vencimentos</h1>
                         </th>
                     </tr>
                 </thead>
@@ -50,8 +50,8 @@ function Ultimas() {
                         <tr key={index}>
                             <td>{linha.col1}</td>
                             <td>{linha.col2}</td>
-                            <td>{linha.col3}</td>
-                            <td><strong>{linha.col4}</strong></td>
+                            <td><strong>{linha.col3}</strong></td>
+                            <td>{linha.col4}</td>
                         </tr>
                     ))}
                     <tr>
@@ -74,4 +74,4 @@ function Ultimas() {
     );
 }
 
-export default Ultimas;
+export default Proximos;
