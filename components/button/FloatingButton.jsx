@@ -1,20 +1,18 @@
 import React from 'react';
-import styles from './FloatingButton.module.css'
+import styles from './FloatingButton.module.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import Link from 'next/link';
 
 const FloatingButton = () => {
   return (
     <div className={styles.floatingButton}>
-      <button onClick={scrollToTop} className={styles.button}>
-      <i class="bi bi-plus"></i>
-      </button>
+      <Link href="/Add">
+        <div className={styles.button}>
+          <i className="bi bi-plus"></i>
+        </div>
+      </Link>
     </div>
   );
-};
-
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
 };
 
 export default FloatingButton;
