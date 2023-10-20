@@ -3,13 +3,20 @@ import styles from "./login.module.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
 import { FaFacebook, FaApple, FaGoogle } from "react-icons/fa6";
-import React, { useState,useContext } from 'react';
+import React, { useState,useContext, useEffect } from 'react';
+import api from "@/app/Services/api";
 
-import { AuthContext } from "@/components/contexts/auth";
 
 const loginPage = () => {
+  useEffect(()=> {
+    async function pegarDados(){
+      const resultado =await api.get(`/usuarios`)
+      console.log(resultado.data);
+    }
+    pegarDados
+   },[])
 
-  // const {authenticated,login} = useContext(AuthContext)
+
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
 
