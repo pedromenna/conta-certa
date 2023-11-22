@@ -1,6 +1,5 @@
-
-import SectionOne from '@/components/SectionOne/SectionOne'
 import styles from './page.module.css'
+import SectionOne from '@/components/SectionOne/SectionOne'
 import SectionTwo from '@/components/SectionTwo/SectionTwo'
 import SectionThree from '@/components/SectionThree/SectionThree'
 import Footer from '@/components/Footer/Footer'
