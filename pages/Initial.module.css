@@ -94,3 +94,58 @@
     cursor: pointer;
     opacity: 0; /* Inicialmente, o botão é invisível */
 }
+
+@media screen and (min-width: 600px) {
+    .section {
+        height: 150vh; /* Adjust the height for larger screens */
+    }
+
+    .boxTwo,
+    .boxSaldo,
+    .boxUltimas,
+    .boxFuturos {
+        width: 100%; /* Make these boxes full width on larger screens */
+        margin-left: 0; /* Remove the left margin on larger screens */
+        margin-right: 0; /* Remove the right margin on larger screens */
+    }
+
+    .boxGrafic {
+        width: 100%; /* Make this box full width on larger screens */
+    }
+
+    .boxSaldo,
+    .boxUltimas,
+    .boxFuturos {
+        margin-right: 0; /* Remove the right margin on larger screens */
+    }
+}
+
+@media screen and (max-width: 599px) {
+    /* Styles for screens with a maximum width of 599px */
+    .box,
+    .boxTwo,
+    .boxGrafic,
+    .boxSaldo,
+    .boxUltimas,
+    .boxFuturos {
+        width: 100%; /* Make these boxes full width on smaller screens */
+        margin-left: 0; /* Remove the left margin on smaller screens */
+        margin-right: 0; /* Remove the right margin on smaller screens */
+    }
+
+    .row,
+    .secondRow,
+    .thirdRow {
+        margin-top: 10px; /* Adjust margin-top for smaller screens */
+    }
+
+    .boxSaldo,
+    .boxUltimas,
+    .boxFuturos {
+        margin-right: 0; /* Remove the right margin on smaller screens */
+    }
+
+    .botaoFixo {
+        opacity: 1; /* Make the button visible on smaller screens */
+    }
+}
