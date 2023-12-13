@@ -1,9 +1,12 @@
+
+
 .box{
     background-color: #ECE9EC;
     border-radius: 10px;    
     margin: 40px 50px;
     width: 700px;
-    height: 1200px;
+    height: 970px;
+    padding-top: 20px;
 }
 
 .form{
@@ -14,8 +17,49 @@
     font-weight: bolder;
 }
 
+
 .camp{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
     
 }
+
+.pass{
+    margin-bottom: 40px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botao_enviar{
+    background-color: #009C86;
+    border: 1px solid #009C86;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: white;
+    margin-right: 30px;
+}
+.botao_cancel{
+    background-color: #6c757d;
+    border: 1px solid  #6c757d;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: white;
+}
+
+.botoes{
+    display: flex;
+    justify-content: end;
+}
+
+#name2{
+    font-weight: bolder;
+    width: 550px;
+
+}
+
+

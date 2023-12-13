@@ -6,7 +6,7 @@ import Link from 'next/link';
 const FloatingButton = () => {
   return (
     <div className={styles.floatingButton}>
-      <Link href="/Add">
+      <Link href="/Adicionar-conta">
         <div className={styles.button}>
           <i className="bi bi-plus"></i>
         </div>

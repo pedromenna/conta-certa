@@ -9,7 +9,6 @@ export default function Add(){
         <section className={styles.section}>
             <NavBar/>
             <div className={styles.border}> </div>
-            <div className={styles.button}><DropdownButton/> </div>
             <div className={styles.panel}> <AddPanel /></div>
         </section>
     )

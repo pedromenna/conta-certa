@@ -1,0 +1,15 @@
+.button{
+    background-color: #ECE9EC ;
+    border: 1px solid #ECE9EC  ;
+    width: 550px;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+.box{
+    background-color: #DADADA;
+    border: 1px solid black;
+}
+

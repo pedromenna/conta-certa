@@ -20,7 +20,7 @@ export default function NavBar() {
             </Link>
           </div>
           <div className={styles.bold}>
-            <Link className="navbar-brand" href="/">
+            <Link className="navbar-brand" href="/Home">
               Home
             </Link>
           </div>
@@ -41,8 +41,8 @@ export default function NavBar() {
           <div className={styles.margin_right}>
             <div className="collapse navbar-collapse float-end" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item" href="/Login">
-                  <Link className="nav-link" href="/Login">
+                <li className="nav-item" href="/Home">
+                  <Link className="nav-link" href="/Home">
                     <div className={styles.bold}>
                       <div className={styles.icon}>
                         <BsArrowLeftCircleFill />

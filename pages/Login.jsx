@@ -23,16 +23,6 @@ const loginPage = () => {
   }
 
 
-
-
-
-
-
-
-
-
-
-
   return (
     <section className={styles.section}>
       <div className={styles.image}>
